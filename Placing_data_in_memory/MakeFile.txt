@@ -1,0 +1,19 @@
+all: safeadd.exe safesubstract.exe safedivide.exe safemultiply.exe
+
+safeadd.exe: safeint.o 
+    gcc safeadd.c safeint.o -o safeadd.exe
+
+safesubstract.exe: safeint.o
+    gcc safesubstract.c safeint.o -o safesubstract.exe
+
+safedivide.exe: safeint.o
+    gcc safedivide.c safeint.o -o safedivide.exe
+
+safemultiply.exe: safeint.o
+    gcc safemultiply.c safeint.o -o safemultiply.exe
+
+safeint.o: safeint.c safeint.h util.o
+    gcc -c safeint.c -o safeint.o
+
+clean:
+    rm -f *.o *.exe

@@ -1,0 +1,1 @@
+gcc task4.c -lm -o task4.exe

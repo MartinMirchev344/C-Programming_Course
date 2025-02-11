@@ -1,0 +1,3 @@
+gcc -c maths.c -o maths.o
+ar rcs libmaths.a maths.o
+gcc -L\C:\Programming_Uchilishte\C\9ti_klas\12.11.24 -lmaths -o main.exe
